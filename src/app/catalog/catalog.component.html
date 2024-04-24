@@ -9,7 +9,9 @@
   
     <ul class="products">
       <li class="product-item" *ngFor="let currentProduct of getFilteredProducts()">
-        <app-product-details [productDetail]="currentProduct"></app-product-details>
+        <app-product-details 
+        [productDetail]="currentProduct" 
+        (buy)="addToCart(currentProduct)"></app-product-details>
       </li>
     </ul>
   </div>

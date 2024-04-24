@@ -17,6 +17,6 @@
       <div *ngIf="productDetail.discount > 0" class="discount">
           {{(productDetail.price * (1-productDetail.discount)) | currency: 'EUR'}}
       </div>
-      <button class="cta" (click)="addToCart(productDetail)">Buy</button>
+      <button class="cta" (click)="buyButtonClicked(productDetail)">Buy</button>
     </div>
   </div>
