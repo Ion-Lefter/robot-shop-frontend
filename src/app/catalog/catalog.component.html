@@ -19,7 +19,7 @@
             </div>
           </div>
           <div class="price">
-            <div [class.strikethrough] ="product?.discount > 0">
+            <div class="bold" [ngClass] ="getDiscountedClasses(product)">
               {{product?.price | currency: 'EUR'}}
             </div>
             <div *ngIf="product?.discount > 0" class="discount">

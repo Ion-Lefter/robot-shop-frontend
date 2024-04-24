@@ -3,6 +3,10 @@
   font-size: 18;
 }
 
+.bold{
+  font-weight: bold;
+}
+
 .container {
     display: flex;
     flex-direction: column;
