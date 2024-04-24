@@ -9,6 +9,7 @@ import { IProduct } from './product.model';
 export class CatalogComponent {
   products: any;
   filter: string = '';
+  cart: IProduct[] = [];
 
   constructor(){
     this.products=[  {
@@ -21,7 +22,6 @@ export class CatalogComponent {
       price: 1220.5,
       discount: 0.2,
     },
-    null,
     {
       id: 17,
       description: "A spring base - great for reaching high places.",
@@ -187,22 +187,17 @@ export class CatalogComponent {
     }]
   }
 
-  getDiscountedClasses(product: IProduct){
-    if(product?.discount > 0)
-      return ['strikethrough']
-    else
-      return [];
-  }
 
 
-  getImageUrl(product: IProduct){
-    if(!product) return '';
-    return '/assets/images/robot-parts/' + product.imageName
-  }
 
   getFilteredProducts(){
     return this.filter ===''
       ? this.products
       :this.products.filter((product: any) => product.category === this.filter);
+  }
+
+  addToCart(product: IProduct){
+    this.cart.push(product);
+    console.log(`product ${product.name} added to cart`)
   }
 }
