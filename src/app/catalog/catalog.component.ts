@@ -26,7 +26,7 @@ ngOnInit(){
   this.productSvc.getProducts().subscribe(products => {
     this.products = products;
   });
-  this.route.params.subscribe((params) =>{
+  this.route.queryParams.subscribe((params) =>{
     this.filter = params['filter'] ?? '';
   })
 
