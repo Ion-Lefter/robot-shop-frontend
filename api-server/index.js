@@ -9,18 +9,18 @@ app.use(bodyParser.json());
     This is for demo purposes only in order to simulate a functioning API serverr.
 */
 const users = {
-  "jim@joesrobotshop.com": {
-    firstName: "Jim",
-    lastName: "Cooper",
-    email: "jim@joesrobotshop.com",
+  "ionlefter21@gmail.com": {
+    firstName: "Ion",
+    lastName: "Lefter",
+    email: "ionlefter21@gmail.com",
+    password: "admin",
+  },
+  "danu@gmail.com": {
+    firstName: "Danu",
+    lastName: "Lefter",
+    email: "danu@gmail.com",
     password: "very-secret",
-  },
-  "joe@joesrobotshop.com": {
-    firstName: "Joe",
-    lastName: "Eames",
-    email: "joe@joesrobotshop.com",
-    password: "super-secret",
-  },
+  }
 };
 let cart = [];
 
